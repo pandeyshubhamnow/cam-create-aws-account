@@ -20,4 +20,5 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-
+variable access_key {}
+variable secret_key {}
