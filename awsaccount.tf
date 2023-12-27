@@ -21,7 +21,7 @@ resource "aws_organizations_account" "account" {
 }
 
 resource "aws_budgets_budget" "cost" {
-  count = var.monthly_budget_usd > 0
+  count = var.monthly_budget_usd > 0 ? 1 : 0
   budget_type  = "COST"
   limit_amount = var.monthly_budget_usd
   limit_unit   = "USD"
