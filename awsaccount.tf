@@ -21,10 +21,12 @@ resource "aws_organizations_account" "account" {
 }
 
 resource "aws_budgets_budget" "cost" {
+  name  = "SN-CAM-Monthly-Budget"
   count = var.monthly_budget_usd > 0 ? 1 : 0
   budget_type  = "COST"
   limit_amount = var.monthly_budget_usd
   limit_unit   = "USD"
+  time_unit    = "MONTHLY"
   cost_filter {
     name = "LinkedAccount"
     values = [
