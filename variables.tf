@@ -20,5 +20,10 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
+variable monthly_budget_usd {
+  type = number
+  default = 0
+}
+
 variable AWS_ACCESS_KEY_ID {}
 variable AWS_SECRET_ACCESS_KEY {}
