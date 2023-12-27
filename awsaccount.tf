@@ -28,7 +28,7 @@ resource "aws_budgets_budget" "cost" {
   cost_filter {
     name = "LinkedAccount"
     values = [
-      aws_organizations_account.account.account_id
+      aws_organizations_account.account.id
     ]
   }
 }
