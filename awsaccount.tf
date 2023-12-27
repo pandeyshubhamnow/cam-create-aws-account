@@ -20,4 +20,16 @@ resource "aws_organizations_account" "account" {
   close_on_deletion = true
 }
 
+resource "aws_budgets_budget" "cost" {
+  count = var.monthly_budget_usd > 0
+  budget_type  = "COST"
+  limit_amount = var.monthly_budget_usd
+  limit_unit   = "USD"
+  cost_filter {
+    name = "LinkedAccount"
+    values = [
+      aws_organizations_account.account.account_id
+    ]
+  }
+}
 
