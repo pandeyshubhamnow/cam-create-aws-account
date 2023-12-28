@@ -20,7 +20,7 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-variable monthly_budget_usd {
+variable monthly_budget {
   type = number
   default = 0
 }
