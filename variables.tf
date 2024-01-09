@@ -26,7 +26,7 @@ variable monthly_budget {
 }
 
 variable is_suspended {
-  type = boolean
+  type = bool
   default = false
 }
 
