@@ -35,3 +35,8 @@ resource "aws_budgets_budget" "cost" {
   }
 }
 
+resource "aws_organizations_policy_attachment" "account" {
+  count = var.is_suspended ? 1 : 0
+  policy_id = “p-tfheef21” 
+  target_id = aws_organizations_account.account.id
+}
