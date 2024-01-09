@@ -25,5 +25,10 @@ variable monthly_budget {
   default = 0
 }
 
+variable is_suspended {
+  type = boolean
+  default = false
+}
+
 variable AWS_ACCESS_KEY_ID {}
 variable AWS_SECRET_ACCESS_KEY {}
