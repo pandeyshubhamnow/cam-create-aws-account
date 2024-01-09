@@ -1,4 +1,5 @@
-
+variable AWS_ACCESS_KEY_ID {}
+variable AWS_SECRET_ACCESS_KEY {}
 
 variable "region" {
   type = string
@@ -29,6 +30,3 @@ variable is_suspended {
   type = bool
   default = false
 }
-
-variable AWS_ACCESS_KEY_ID {}
-variable AWS_SECRET_ACCESS_KEY {}
