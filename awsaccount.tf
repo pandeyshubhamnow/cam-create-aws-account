@@ -34,12 +34,9 @@ resource "aws_budgets_budget" "cost" {
     ]
   }
 }
-data "aws_organizations_policy" "example_policy" {
-  name = "cam_suspend_account"
-}
 
 resource "aws_organizations_policy_attachment" "account" {
   count = var.is_suspended ? 1 : 0
-  policy_id = "p-tfheef21" 
+  policy_id = "p-9ka1ntdn" 
   target_id = aws_organizations_account.account.id
 }
