@@ -34,6 +34,9 @@ resource "aws_budgets_budget" "cost" {
     ]
   }
 }
+data "aws_organizations_policy" "example_policy" {
+  name = "cam_suspend_account"
+}
 
 resource "aws_organizations_policy_attachment" "account" {
   count = var.is_suspended ? 1 : 0
