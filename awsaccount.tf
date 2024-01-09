@@ -40,6 +40,6 @@ data "aws_organizations_policy" "example_policy" {
 
 resource "aws_organizations_policy_attachment" "account" {
   count = var.is_suspended ? 1 : 0
-  policy_id = “p-tfheef21” 
+  policy_id = "p-tfheef21" 
   target_id = aws_organizations_account.account.id
 }
