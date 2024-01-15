@@ -33,6 +33,7 @@ variable is_suspended {
 variable suspend_policy_id {
   type = string
   description = "ID of the created Service Control Policy for Suspension"
+  default = null
 }
 
 variable AWS_ACCESS_KEY_ID {}
