@@ -25,5 +25,15 @@ variable monthly_budget {
   default = 0
 }
 
+variable is_suspended {
+  type = bool
+  default = false
+}
+
+variable suspend_policy_id {
+  type = string
+  description = "ID of the created Service Control Policy for Suspension"
+}
+
 variable AWS_ACCESS_KEY_ID {}
 variable AWS_SECRET_ACCESS_KEY {}
