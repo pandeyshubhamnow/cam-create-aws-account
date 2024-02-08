@@ -20,15 +20,21 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-variable "close_delete" {
-  type = bool
-  description = "Close Account on deletion"
-  default = true
+variable monthly_budget {
+  type = number
+  default = 0
 }
 
-variable "gov_cloud" {
+variable is_suspended {
   type = bool
-  description = "Gov Cloud Account"
   default = false
 }
 
+variable suspend_policy_id {
+  type = string
+  description = "ID of the created Service Control Policy for Suspension"
+  default = null
+}
+
+variable AWS_ACCESS_KEY_ID {}
+variable AWS_SECRET_ACCESS_KEY {}
