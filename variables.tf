@@ -18,6 +18,7 @@ variable "root_email" {
 variable "parent_id" {
   type = string
   description = "(Required) Account Parent Organizational Unit"
+  default = ""
 }
 
 variable tags{
