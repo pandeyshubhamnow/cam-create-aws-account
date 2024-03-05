@@ -15,10 +15,6 @@ variable "root_email" {
   description = "(Required) Account Email"
 }
 
-variable "parent_id" {
-  type = string
-  description = "(Required) Account Parent Organizational Unit"
-}
 
 variable tags{
   type = map(string)
