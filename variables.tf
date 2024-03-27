@@ -24,3 +24,8 @@ variable monthly_budget {
   type = number
   default = 0
 }
+
+variable notification_email {
+  type = string
+  description = "Additional email where Budget Notifications are to be sent"
+}
