@@ -30,5 +30,10 @@ variable is_suspended {
   default = false
 }
 
+variable notification_email {
+  type = string
+  description = "Additional email where Budget Notifications are to be sent"
+}
+
 variable AWS_ACCESS_KEY_ID {}
 variable AWS_SECRET_ACCESS_KEY {}
