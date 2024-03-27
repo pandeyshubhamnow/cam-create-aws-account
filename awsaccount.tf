@@ -18,6 +18,7 @@ resource "aws_organizations_account" "account" {
   name = var.account_name
   tags = var.tags
   close_on_deletion = true
+  parent_id = var.parent_id
 }
 
 resource "aws_budgets_budget" "cost" {
