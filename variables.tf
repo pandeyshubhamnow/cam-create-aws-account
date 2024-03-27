@@ -35,5 +35,10 @@ variable notification_email {
   description = "Additional email where Budget Notifications are to be sent"
 }
 
+variable "parent_id" {
+  type = string
+  description = "(Required) Account Parent Organizational Unit"
+}
+
 variable AWS_ACCESS_KEY_ID {}
 variable AWS_SECRET_ACCESS_KEY {}
